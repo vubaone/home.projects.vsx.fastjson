@@ -1,0 +1,1 @@
+"{\"id\":1,\"name\":\"John Doe\",\"email\":\"john.doe@example.com\",\"avatar\":\"https://i.pravatar.cc/150?img=1\",\"role\":\"developer\",\"created_at\":\"2024-01-15T10:30:00Z\"}"
