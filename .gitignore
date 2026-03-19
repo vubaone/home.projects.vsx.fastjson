@@ -1,0 +1,6 @@
+node_modules/
+*.vsix
+.vscode-test/
+out/
+release/
+.DS_Store

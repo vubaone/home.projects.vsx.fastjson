@@ -1,0 +1,81 @@
+{
+  "name": "fastjson",
+  "displayName": "Fast JSON",
+  "description": "Quick JSON utilities: format, minify, and convert between JSON and escaped text.",
+  "version": "1.0.1",
+  "publisher": "vuba",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "icon": "icon.png",
+  "scripts": {
+    "package": "vsce package -o release/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lap16515/fastjson"
+  },
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "submenus": [
+      {
+        "id": "fastjson.submenu",
+        "label": "Fast JSON"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "fastjson.submenu",
+          "group": "fastjson",
+          "when": "editorHasSelection"
+        }
+      ],
+      "fastjson.submenu": [
+        {
+          "command": "fastjson.format",
+          "group": "1_format"
+        },
+        {
+          "command": "fastjson.minify",
+          "group": "1_format"
+        },
+        {
+          "command": "fastjson.toText",
+          "group": "2_convert"
+        },
+        {
+          "command": "fastjson.toJson",
+          "group": "2_convert"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "fastjson.format",
+        "title": "Format / Beautify",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.minify",
+        "title": "Minify / Compact",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.toText",
+        "title": "Convert To Text",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.toJson",
+        "title": "Convert To JSON",
+        "category": "Fast JSON"
+      }
+    ]
+  }
+}
