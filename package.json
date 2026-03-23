@@ -1,9 +1,9 @@
 {
   "name": "fastjson",
   "displayName": "Fast JSON",
-  "description": "Quick JSON utilities: format, minify, and convert between JSON and escaped text.",
-  "version": "1.0.1",
-  "publisher": "vuba",
+  "description": "Quick JSON utilities for VS Code: format, minify, and convert between JSON and escaped text.",
+  "version": "1.0.2",
+  "publisher": "vubaone",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -12,12 +12,21 @@
     "Other"
   ],
   "icon": "icon.png",
+  "homepage": "https://vuba.one",
+  "bugs": {
+    "url": "https://github.com/vubaone/home.projects.vsx.fastjson/issues"
+  },
+  "author": {
+    "name": "Vuba One",
+    "url": "https://vuba.one"
+  },
+  "license": "MIT",
   "scripts": {
     "package": "vsce package -o release/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lap16515/fastjson"
+    "url": "https://github.com/vubaone/home.projects.vsx.fastjson.git"
   },
   "activationEvents": [],
   "main": "./extension.js",
