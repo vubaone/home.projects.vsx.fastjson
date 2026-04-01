@@ -1,1 +1,35 @@
-"{\"id\":1,\"name\":\"John Doe\",\"email\":\"john.doe@example.com\",\"avatar\":\"https://i.pravatar.cc/150?img=1\",\"role\":\"developer\",\"created_at\":\"2024-01-15T10:30:00Z\"}"
+{
+  "project": "home.projects.vsx.fastjson",
+  "version": "1.0.0",
+  "metadata": {
+    "author": {
+      "name": "User",
+      "contact": {
+        "email": "user@example.com",
+        "phone": "+1-555-0123"
+      }
+    },
+    "configuration": {
+      "debug": true,
+      "features": {
+        "fastParsing": true,
+        "lazyLoading": false,
+        "cache": {
+          "enabled": true,
+          "maxSize": 1024,
+          "strategy": "LRU"
+        }
+      }
+    }
+  },
+  "data": [
+    {
+      "id": 1,
+      "value": "Test 1"
+    },
+    {
+      "id": 2,
+      "value": "Test 2"
+    }
+  ]
+}

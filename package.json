@@ -2,7 +2,7 @@
   "name": "fastjson",
   "displayName": "Fast JSON",
   "description": "Quick JSON utilities for VS Code: format, minify, and convert between JSON and escaped text.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "vubaone",
   "engines": {
     "vscode": "^1.70.0"
@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "package": "vsce package -o release/"
+    "package": "npx --yes @vscode/vsce package -o release/"
   },
   "repository": {
     "type": "git",
@@ -41,26 +41,33 @@
       "editor/context": [
         {
           "submenu": "fastjson.submenu",
-          "group": "fastjson",
-          "when": "editorHasSelection"
+          "group": "fastjson"
         }
       ],
       "fastjson.submenu": [
         {
           "command": "fastjson.format",
-          "group": "1_format"
+          "group": "1_format",
+          "when": "editorHasSelection"
         },
         {
           "command": "fastjson.minify",
-          "group": "1_format"
+          "group": "1_format",
+          "when": "editorHasSelection"
         },
         {
           "command": "fastjson.toText",
-          "group": "2_convert"
+          "group": "2_convert",
+          "when": "editorHasSelection"
         },
         {
           "command": "fastjson.toJson",
-          "group": "2_convert"
+          "group": "2_convert",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "fastjson.copyFlatKey",
+          "group": "3_utilities"
         }
       ]
     },
@@ -83,6 +90,11 @@
       {
         "command": "fastjson.toJson",
         "title": "Convert To JSON",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.copyFlatKey",
+        "title": "Copy Flat Key",
         "category": "Fast JSON"
       }
     ]

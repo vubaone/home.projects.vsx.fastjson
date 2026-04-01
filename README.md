@@ -16,17 +16,18 @@ Select any text in the editor, right-click, and choose **Fast JSON** to access:
 |---|---|
 | **Format / Beautify** | Pretty-print JSON with 2-space indentation |
 | **Minify / Compact** | Collapse JSON to a single line with no extra whitespace |
-| **Convert To Text** | Escape the selection into a JSON-safe string (`"` → `\"`, newlines → `\n`, etc.) |
-| **Convert To JSON** | Unescape a previously escaped string back into raw JSON |
+| **Convert To Text** | Minifies the JSON selection and escapes it into a JSON-safe string (`"` → `\"`, newlines → `\n`, etc.) |
+| **Convert To JSON** | Unescapes a string back into raw JSON and automatically beautifies it |
+| **Copy Flat Key** | Extracts and copies the full dot-separated JSON path (e.g., `user.contact.email`) of the cursor's location |
 
-> The **Fast JSON** menu only appears when you have text selected.
+> The **Fast JSON** root menu is always visible. Formatting and conversion tools appear when text is selected, while **Copy Flat Key** is available regardless of selection.
 
 ## Project Info
 
 - Publisher: **Vuba One**
 - Website: **https://vuba.one**
 - Repository: **https://github.com/vubaone/home.projects.vsx.fastjson**
-- Version: **1.0.2**
+- Version: **1.0.3**
 
 ## Error Handling
 
@@ -39,8 +40,8 @@ If the selected text is not valid JSON (for Format / Minify / Convert To JSON), 
 ```bash
 cd home.projects.vsx.fastjson
 npm install -g @vscode/vsce   # one-time
-vsce package                  # produces vubaone.fastjson-1.0.2.vsix
-code --install-extension vubaone.fastjson-1.0.2.vsix
+vsce package                  # produces fastjson-1.0.3.vsix
+code --install-extension fastjson-1.0.3.vsix
 ```
 
 ### Development
