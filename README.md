@@ -19,15 +19,20 @@ Select any text in the editor, right-click, and choose **Fast JSON** to access:
 | **Convert To Text** | Minifies the JSON selection and escapes it into a JSON-safe string (`"` → `\"`, newlines → `\n`, etc.) |
 | **Convert To JSON** | Unescapes a string back into raw JSON and automatically beautifies it |
 | **Copy Flat Key** | Extracts and copies the full dot-separated JSON path (e.g., `user.contact.email`) of the cursor's location |
+| **Copy Value** | Copies the JSON value at the cursor, unescaping strings when possible |
+| **Copy Node** | Copies the complete JSON node at the cursor; object properties include the key and are wrapped in `{}` |
+| **Cut Node** | Copies the complete JSON node at the cursor, then removes it from the document |
+| **Delete Node** | Removes the complete JSON node at the cursor while keeping surrounding JSON valid |
+| **Node Info** | Shows the selected node type and its first-level property/item count |
 
-> The **Fast JSON** root menu is always visible. Formatting and conversion tools appear when text is selected, while **Copy Flat Key** is available regardless of selection.
+> The **Fast JSON** root menu is always visible. Formatting and conversion tools appear when text is selected, while cursor-based tools are available regardless of selection.
 
 ## Project Info
 
-- Publisher: **Vuba One**
+- Publisher: **VUBA**
 - Website: **https://vuba.one**
 - Repository: **https://github.com/vubaone/home.projects.vsx.fastjson**
-- Version: **1.0.3**
+- Version: **1.1.0**
 
 ## Error Handling
 
@@ -39,9 +44,9 @@ If the selected text is not valid JSON (for Format / Minify / Convert To JSON), 
 
 ```bash
 cd home.projects.vsx.fastjson
-npm install -g @vscode/vsce   # one-time
-vsce package                  # produces fastjson-1.0.3.vsix
-code --install-extension fastjson-1.0.3.vsix
+npm install -g @vscode/vsce                      # one-time
+npm run package                                  # produces release/vubaone.fastjson-1.1.0.vsix
+code --install-extension release/vubaone.fastjson-1.1.0.vsix
 ```
 
 ### Development

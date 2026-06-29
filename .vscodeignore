@@ -3,3 +3,6 @@
 node_modules/
 *.vsix
 .vscode/
+release/
+sample.txt
+**/.DS_Store

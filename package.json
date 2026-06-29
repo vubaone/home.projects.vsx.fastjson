@@ -1,8 +1,8 @@
 {
   "name": "fastjson",
   "displayName": "Fast JSON",
-  "description": "Quick JSON utilities for VS Code: format, minify, and convert between JSON and escaped text.",
-  "version": "1.0.3",
+  "description": "Quick JSON utilities for VS Code: format, minify, inspect, copy, cut, delete nodes, and convert between JSON and escaped text.",
+  "version": "1.1.0",
   "publisher": "vubaone",
   "engines": {
     "vscode": "^1.70.0"
@@ -11,13 +11,25 @@
     "Formatters",
     "Other"
   ],
+  "keywords": [
+    "json",
+    "format",
+    "beautify",
+    "prettify",
+    "minify",
+    "json path",
+    "escape",
+    "unescape",
+    "formatter"
+  ],
   "icon": "icon.png",
   "homepage": "https://vuba.one",
   "bugs": {
     "url": "https://github.com/vubaone/home.projects.vsx.fastjson/issues"
   },
   "author": {
-    "name": "Vuba One",
+    "name": "VUBA",
+    "email": "dev@vuba.one",
     "url": "https://vuba.one"
   },
   "license": "MIT",
@@ -28,7 +40,18 @@
     "type": "git",
     "url": "https://github.com/vubaone/home.projects.vsx.fastjson.git"
   },
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:fastjson.format",
+    "onCommand:fastjson.minify",
+    "onCommand:fastjson.toText",
+    "onCommand:fastjson.toJson",
+    "onCommand:fastjson.copyFlatKey",
+    "onCommand:fastjson.copyValue",
+    "onCommand:fastjson.copyNode",
+    "onCommand:fastjson.cutNode",
+    "onCommand:fastjson.deleteNode",
+    "onCommand:fastjson.nodeInfo"
+  ],
   "main": "./extension.js",
   "contributes": {
     "submenus": [
@@ -68,6 +91,26 @@
         {
           "command": "fastjson.copyFlatKey",
           "group": "3_utilities"
+        },
+        {
+          "command": "fastjson.copyValue",
+          "group": "3_utilities"
+        },
+        {
+          "command": "fastjson.copyNode",
+          "group": "3_utilities"
+        },
+        {
+          "command": "fastjson.cutNode",
+          "group": "3_utilities"
+        },
+        {
+          "command": "fastjson.deleteNode",
+          "group": "3_utilities"
+        },
+        {
+          "command": "fastjson.nodeInfo",
+          "group": "3_utilities"
         }
       ]
     },
@@ -95,6 +138,31 @@
       {
         "command": "fastjson.copyFlatKey",
         "title": "Copy Flat Key",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.copyValue",
+        "title": "Copy Value",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.copyNode",
+        "title": "Copy Node",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.cutNode",
+        "title": "Cut Node",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.deleteNode",
+        "title": "Delete Node",
+        "category": "Fast JSON"
+      },
+      {
+        "command": "fastjson.nodeInfo",
+        "title": "Node Info",
         "category": "Fast JSON"
       }
     ]
