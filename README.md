@@ -45,8 +45,8 @@ If the selected text is not valid JSON (for Format / Minify / Convert To JSON), 
 ```bash
 cd home.projects.vsx.fastjson
 npm install -g @vscode/vsce                      # one-time
-npm run package                                  # produces release/vubaone.fastjson-1.1.0.vsix
-code --install-extension release/vubaone.fastjson-1.1.0.vsix
+npm run package                                  # produces release/vubaone.xfastjson-1.1.0.vsix
+code --install-extension release/vubaone.xfastjson-1.1.0.vsix
 ```
 
 ### Development
